@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Your Next Great Outdoor Adventure. Plan hikes, forest treks, canyon climbs, and custom wilderness escapes with expert guidance.">
+    <title>ADVENTURE - Create Your Outdoor Journey</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Custom Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#" class="logo" aria-label="Adventure Home">
+                <span class="logo-icon">
+                    <svg width="30" height="30" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" style="display: block;">
+                        <rect x="12" y="12" width="76" height="76" rx="24" stroke="currentColor" stroke-width="7"/>
+                        <path d="M32 60 C32 48, 68 48, 68 60 C68 72, 32 72, 32 60 C32 48, 68 48, 68 40 C68 28, 32 28, 32 40" stroke="currentColor" stroke-width="7"/>
+                    </svg>
+                </span>
+            </a>
+            
+            <div class="search-bar">
+                <span class="search-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </span>
+                <input type="text" placeholder="Search destinations, treks..." id="searchInput">
+            </div>
+
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="#" class="active">Adventure</a></li>
+                    <li><a href="#wonders">About</a></li>
+                    <li><a href="#reasons">Blogs</a></li>
+                    <li><a href="#" class="btn-book-trigger">Book Now</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme">
+                    <span class="sun-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    </span>
+                    <span class="moon-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    </span>
+                </button>
+                <button class="btn btn-login btn-login-trigger">Login</button>
+                <!-- Mobile Menu Button -->
+                <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <!-- Static Hero Background -->
+        <div class="hero-bg-container">
+            <div class="hero-slide-bg active" style="background-image: url('assets/hero_bg.png');"></div>
+        </div>
+
+        <!-- 3D sandwich layer for text: Title & Subtitle Container (Layer 2 & 4) -->
+        <!-- Behind Mountain Layer (z-index: 2) -->
+        <div class="hero-title-container behind" style="z-index: 2;">
+            <h1 class="hero-title">
+                <span class="letter" style="animation-delay: 0.05s; visibility: hidden; opacity: 0;">A</span>
+                <span class="letter letter-out" style="animation-delay: 0.1s;">D</span>
+                <span class="letter" style="animation-delay: 0.15s; visibility: hidden; opacity: 0;">V</span>
+                <span class="letter letter-out" style="animation-delay: 0.2s;">E</span>
+                <span class="letter" style="animation-delay: 0.25s; visibility: hidden; opacity: 0;">N</span>
+                <span class="letter letter-out" style="animation-delay: 0.3s;">T</span>
+                <span class="letter" style="animation-delay: 0.35s; visibility: hidden; opacity: 0;">U</span>
+                <span class="letter letter-out" style="animation-delay: 0.4s;">R</span>
+                <span class="letter" style="animation-delay: 0.45s; visibility: hidden; opacity: 0;">E</span>
+            </h1>
+        </div>
+
+        <!-- Front Mountain Layer (z-index: 4) -->
+        <div class="hero-title-container front" style="z-index: 4;">
+            <h1 class="hero-title">
+                <span class="letter letter-in" style="animation-delay: 0.05s;">A</span>
+                <span class="letter" style="animation-delay: 0.1s; visibility: hidden; opacity: 0;">D</span>
+                <span class="letter letter-in" style="animation-delay: 0.15s;">V</span>
+                <span class="letter" style="animation-delay: 0.2s; visibility: hidden; opacity: 0;">E</span>
+                <span class="letter letter-in" style="animation-delay: 0.25s;">N</span>
+                <span class="letter" style="animation-delay: 0.3s; visibility: hidden; opacity: 0;">T</span>
+                <span class="letter letter-in" style="animation-delay: 0.35s;">U</span>
+                <span class="letter" style="animation-delay: 0.4s; visibility: hidden; opacity: 0;">R</span>
+                <span class="letter letter-in" style="animation-delay: 0.45s;">E</span>
+            </h1>
+            <p class="hero-subtitle animate-subtitle">Create Your Outdoor Adventure, Discover With Us.</p>
+            <div class="hero-cta animate-cta">
+                <button class="btn btn-primary btn-book-trigger">Start Exploring</button>
+                <a href="#wonders" class="btn btn-secondary">Learn More <span class="arrow">↓</span></a>
+            </div>
+        </div>
+
+        <!-- Foreground forest/mountain cutout layer (Layer 3) -->
+        <div class="hero-fg-overlay" style="background-image: url('assets/hero_fg.png');"></div>
+
+        <!-- Shading tint overlay (Layer 3.5) -->
+        <div class="hero-tint-overlay"></div>
+
+        <!-- Blueprint wireframe edge canvas overlay (Layer 5) -->
+        <canvas id="blueprintCanvas"></canvas>
+
+        <!-- Interactive content layer (Layer 5) -->
+        <div class="hero-content-wrapper">
+            <!-- Left Vertical Indicators -->
+            <div class="hero-indicators">
+                <span class="indicator-num active" data-index="0" data-target="hero">01</span>
+                <span class="indicator-num" data-index="1" data-target="wonders">02</span>
+                <span class="indicator-num" data-index="2" data-target="vacation">03</span>
+                <span class="indicator-num" data-index="3" data-target="explore">04</span>
+            </div>
+
+            <!-- Bottom Interactive Tabs -->
+            <div class="hero-tabs">
+                <div class="hero-tab active" data-target="hero">
+                    <span class="tab-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon><line x1="9" y1="3" x2="9" y2="18"></line><line x1="15" y1="6" x2="15" y2="21"></line></svg>
+                    </span>
+                    <div class="tab-info">
+                        <h4>Alpine Peaks</h4>
+                        <p>Be yourself with new emotions</p>
+                    </div>
+                </div>
+                <div class="hero-tab" data-target="wonders">
+                    <span class="tab-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"></path></svg>
+                    </span>
+                    <div class="tab-info">
+                        <h4>Ridge Vistas</h4>
+                        <p>Create your outdoor escape</p>
+                    </div>
+                </div>
+                <div class="hero-tab" data-target="vacation">
+                    <span class="tab-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2-8 12h16L12 2z"></path><path d="M12 14v6"></path><path d="M9 20h6"></path></svg>
+                    </span>
+                    <div class="tab-info">
+                        <h4>Misty Canopies</h4>
+                        <p>Discover untouched paths</p>
+                    </div>
+                </div>
+                <div class="hero-tab" data-target="explore">
+                    <span class="tab-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 18a5 5 0 0 0-10 0"></path><line x1="12" y1="2" x2="12" y2="9"></line><line x1="4.22" y1="10.22" x2="9.17" y2="15.17"></line><line x1="1" y1="18" x2="5" y2="18"></line><line x1="23" y1="18" x2="19" y2="18"></line><line x1="19.78" y1="10.22" x2="14.83" y2="15.17"></line></svg>
+                    </span>
+                    <div class="tab-info">
+                        <h4>Red Canyons</h4>
+                        <p>With new emotions, be yourself</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Wonders of Nature Section -->
+    <section class="section wonders-section" id="wonders">
+        <div class="container">
+            <div class="section-header reveal-on-scroll">
+                <div class="section-title-group">
+                    <span class="section-tag">Destinations</span>
+                    <h2 class="section-title">The Wonders Of Nature</h2>
+                    <p class="section-desc">We seek to provide authentic, unforgettable experiences for travelers across the globe.</p>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn prev-btn" id="naturePrev" aria-label="Previous destination">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                    </button>
+                    <button class="slider-btn next-btn" id="natureNext" aria-label="Next destination">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Carousel Cards Grid -->
+            <div class="nature-cards-container">
+                <div class="nature-cards-track" id="natureCardsTrack">
+                    <!-- Card 1 -->
+                    <div class="nature-card reveal-on-scroll">
+                        <div class="card-image-wrapper">
+                            <img src="assets/nature_1.png" alt="Sunset reflecting over sharp mountains" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Cairn Hill</h3>
+                            <p>Discover panoramic ridge views, rolling green valleys, and hidden alpine meadows under glorious golden suns.</p>
+                            <span class="card-location"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Val Di Funes, Italy</span>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="nature-card reveal-on-scroll">
+                        <div class="card-image-wrapper">
+                            <img src="assets/nature_2.png" alt="Foggy forest pathway with sunbeams" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Havana Street</h3>
+                            <p>Wander down the quiet, mossy woodland paths where morning mist holds the quiet whispers of the ancient pines.</p>
+                            <span class="card-location"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Black Forest, Germany</span>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="nature-card reveal-on-scroll">
+                        <div class="card-content-top">
+                            <span class="card-badge">Top Choice</span>
+                        </div>
+                        <div class="card-image-wrapper">
+                            <img src="assets/nature_3.png" alt="Majestic elephant in tropical forest" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Ghurp Forest</h3>
+                            <p>Meet majestic forest giants moving silently through deep tropical canopies illuminated by spectacular sunbeams.</p>
+                            <span class="card-location"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Chiang Mai, Thailand</span>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="nature-card reveal-on-scroll">
+                        <div class="card-image-wrapper">
+                            <img src="assets/nature_4.png" alt="Red sandstone mountain cliffs" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Red Mountain</h3>
+                            <p>Conquer the epic, rugged reddish rock peaks that rise defiantly into dynamic skies, offering dramatic lookouts.</p>
+                            <span class="card-location"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Sedona, USA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reason For Choosing Us Section -->
+    <section class="section reasons-section" id="reasons">
+        <!-- Floating Clearing Mist (Scrollytelling) -->
+        <div class="mist-layer mist-1" aria-hidden="true"></div>
+        <div class="mist-layer mist-2" aria-hidden="true"></div>
+        
+        <div class="container">
+            <div class="section-header center reveal-on-scroll">
+                <span class="section-tag">Why Choose Us</span>
+                <h2 class="section-title">Reason For Choosing Us</h2>
+                <p class="section-desc max-w-600">We prioritize security, comfort, and deep immersion in nature. Here is why explorers choose us to navigate their journeys.</p>
+            </div>
+
+            <div class="reasons-grid">
+                <!-- Reason 1 -->
+                <div class="reason-card reveal-on-scroll">
+                    <div class="reason-icon-wrapper">
+                        <!-- Custom Security/Trust Shield SVG -->
+                        <svg class="reason-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            <polyline points="9 11 11 13 15 9"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Tried and Trusted</h3>
+                    <p>Over 20 million travelers have mapped their hikes, stays, and guided explorations with our global networks.</p>
+                </div>
+                <!-- Reason 2 -->
+                <div class="reason-card reveal-on-scroll" style="transition-delay: 0.1s;">
+                    <div class="reason-icon-wrapper">
+                        <!-- Custom Compass SVG -->
+                        <svg class="reason-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                        </svg>
+                    </div>
+                    <h3>Reliable Support</h3>
+                    <p>Our response teams are active 24/7. Reach out by phone, app chat, or email, even from high-altitude camps.</p>
+                </div>
+                <!-- Reason 3 -->
+                <div class="reason-card reveal-on-scroll" style="transition-delay: 0.2s;">
+                    <div class="reason-icon-wrapper">
+                        <!-- Custom Group/Partner SVG -->
+                        <svg class="reason-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>One-stop Travel Partner</h3>
+                    <p>From gear rental and peak permits to luxury wilderness cabins, we consolidate everything you need for your trip.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vacation Grid / Callout Section -->
+    <section class="section vacation-section" id="vacation">
+        <div class="container">
+            <div class="vacation-content-grid">
+                <!-- Left: Aesthetic Image Grid -->
+                <div class="vacation-image-grid reveal-on-scroll">
+                    <div class="grid-item item-1">
+                        <img src="assets/gallery1.png" alt="Sunny alpine meadow and cabin" loading="lazy">
+                    </div>
+                    <div class="grid-item item-2">
+                        <img src="assets/gallery2.png" alt="Stream in dense green forest" loading="lazy">
+                    </div>
+                    <div class="grid-item item-3">
+                        <img src="assets/gallery4.png" alt="Scenic winding mountain highway" loading="lazy">
+                    </div>
+                    <div class="grid-item item-4">
+                        <img src="assets/gallery3.png" alt="Waterfall inside cavern with light" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Right: Text details -->
+                <div class="vacation-text-content reveal-on-scroll">
+                    <span class="section-tag">Perfect Stays & Treks</span>
+                    <h2 class="section-title">Here's makes a vacation perfect for you!</h2>
+                    <p class="section-desc">Whether you are planning a relaxing weekend getaway with your pet, a rigorous mountain climb, or an immersive deep-forest excursion, we customize lodging and itineraries that hit the perfect sweet spot.</p>
+                    <p class="section-subtext">Find everything from rustic, off-grid timber cabins heated by fires, to modern glass-domed eco-lodges with sweeping views of the northern lights.</p>
+                    <div class="vacation-features">
+                        <div class="feature-item">
+                            <span class="feature-check">✓</span>
+                            <span>Pet-friendly cabins and trails</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-check">✓</span>
+                            <span>Hand-picked safety-vetted local guides</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-check">✓</span>
+                            <span>Flexible cancelations on all lodges</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-book-trigger">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore The Nature Section -->
+    <section class="section explore-section" id="explore" style="background-image: linear-gradient(rgba(10, 15, 15, 0.75), rgba(10, 15, 15, 0.9)), url('assets/explore_bg.png');">
+        <div class="container">
+            <div class="explore-wrapper">
+                <!-- Left Details Box -->
+                <div class="explore-info-panel reveal-on-scroll">
+                    <span class="section-tag light-text">Interactive Map</span>
+                    <h2 class="section-title light-text">Explore The Nature With Us</h2>
+                    <p class="section-desc light-text">Hover or click on the map hotspots to identify highlight areas of our managed national park trails and active camps.</p>
+                    
+                    <div class="explore-callouts">
+                        <!-- Callout 1 -->
+                        <div class="explore-callout active" data-point="1">
+                            <div class="callout-header">
+                                <span class="callout-num">01</span>
+                                <h3>Eco-Lodge Sanctuary</h3>
+                            </div>
+                            <p>Whether you're planning a family vacation with your pet, a relaxing weekend getaway, 2 million trees surround this solar-powered timber sanctuary.</p>
+                        </div>
+                        <!-- Callout 2 -->
+                        <div class="explore-callout" data-point="2">
+                            <div class="callout-header">
+                                <span class="callout-num">02</span>
+                                <h3>Wilderness Guided Trek</h3>
+                            </div>
+                            <p>Whether you're planning a family vacation with your pet, a relaxing, deep immersion into old-growth redwood reserves with expert rangers.</p>
+                        </div>
+                        <!-- Callout 3 -->
+                        <div class="explore-callout" data-point="3">
+                            <div class="callout-header">
+                                <span class="callout-num">03</span>
+                                <h3>Hidden Falls Camp</h3>
+                            </div>
+                            <p>Vacation with your pet at a relaxing lakeside camp situated right at the base of the majestic, rushing mist of the Hidden Falls.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Interactive Interactive Visual Frame -->
+                <div class="explore-map-container reveal-on-scroll">
+                    <div class="map-frame">
+                        <img src="assets/explore_bg.png" alt="Dense green forest map background" class="map-bg">
+                        <div class="map-grid-overlay"></div>
+                        <div class="map-border-overlay"></div>
+                        
+                        <!-- Hotspots -->
+                        <button class="map-hotspot hotspot-1 active" data-point="1" aria-label="Lodge Location">
+                            <span class="hotspot-pulse"></span>
+                            <span class="hotspot-label">1</span>
+                            <div class="hotspot-tooltip">
+                                <h4>Eco-Lodge Sanctuary</h4>
+                                <p>Timber structure, solar powered, 100% sustainable.</p>
+                            </div>
+                        </button>
+                        <button class="map-hotspot hotspot-2" data-point="2" aria-label="Trekking Base">
+                            <span class="hotspot-pulse"></span>
+                            <span class="hotspot-label">2</span>
+                            <div class="hotspot-tooltip">
+                                <h4>Wilderness Guided Trek</h4>
+                                <p>Ancient redwood trail, intermediate grade, 8km loop.</p>
+                            </div>
+                        </button>
+                        <button class="map-hotspot hotspot-3" data-point="3" aria-label="Waterfall Camp">
+                            <span class="hotspot-pulse"></span>
+                            <span class="hotspot-label">3</span>
+                            <div class="hotspot-tooltip">
+                                <h4>Hidden Falls Camp</h4>
+                                <p>Caves, wild swimming pools, overnight campsites.</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">▲</span>
+                        <span class="logo-text">Adventure</span>
+                    </a>
+                    <p class="footer-about">Connecting passionate travelers with pristine, protected wilderness areas since 2012. Join us to experience the wild responsibly.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#wonders">Destinations</a></li>
+                        <li><a href="#reasons">Our Story</a></li>
+                        <li><a href="#vacation">Custom Trips</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Help & Support</h3>
+                    <ul>
+                        <li><a href="#">Safety Guidelines</a></li>
+                        <li><a href="#">Gear Checklist</a></li>
+                        <li><a href="#">Ranger Alerts</a></li>
+                        <li><a href="#">FAQ & Booking Rules</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h3>Join the Trail</h3>
+                    <p>Subscribe to receive trail warnings, seasonal booking openings, and wild survival tips.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Your email address" required aria-label="Email address">
+                        <button type="submit" class="btn btn-primary">Join</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Adventure Inc. All rights reserved. Vetted by Global Wildlands Association.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Modals -->
+    <!-- Booking Modal -->
+    <div class="modal" id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="modalBookTitle">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <button class="modal-close" id="closeBooking" aria-label="Close modal">✕</button>
+            <div class="modal-header">
+                <h2 id="modalBookTitle">Begin Your Expedition</h2>
+                <p>Fill out your basic details and our coordinators will reach out in under 12 hours with customized route options.</p>
+            </div>
+            <form class="modal-form" id="bookingForm">
+                <div class="form-group">
+                    <label for="bookName">Full Name</label>
+                    <input type="text" id="bookName" placeholder="e.g. Alex Honnold" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="bookEmail">Email Address</label>
+                        <input type="email" id="bookEmail" placeholder="alex@adventure.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookPhone">Phone Number</label>
+                        <input type="tel" id="bookPhone" placeholder="+1 (555) 019-2834" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="bookDestination">Preferred Escape</label>
+                        <select id="bookDestination">
+                            <option value="cairn_hill">Cairn Hill (Alpine Peaks)</option>
+                            <option value="havana_street">Havana Street (Forest Walks)</option>
+                            <option value="ghurp_forest">Ghurp Forest (Elephant Trails)</option>
+                            <option value="red_mountain">Red Mountain (Canyons)</option>
+                            <option value="custom">Custom Adventure Journey</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookDate">Departure Window</label>
+                        <input type="date" id="bookDate" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="bookGuests">Number of Guests</label>
+                    <input type="number" id="bookGuests" min="1" max="20" value="1" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-full">Request Route Proposals</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="modalLoginTitle">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container max-w-400">
+            <button class="modal-close" id="closeLogin" aria-label="Close modal">✕</button>
+            <div class="modal-header">
+                <h2 id="modalLoginTitle">Access Basecamp</h2>
+                <p>Log in to view active trail permits and message your dedicated ranger guide.</p>
+            </div>
+            <form class="modal-form" id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email Address</label>
+                    <input type="email" id="loginEmail" placeholder="alex@adventure.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPass">Password</label>
+                    <input type="password" id="loginPass" placeholder="••••••••" required>
+                </div>
+                <div class="form-actions-row">
+                    <label class="checkbox-label">
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#" class="forgot-pass-link">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn btn-primary w-full">Access Basecamp</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notification system for forms -->
+    <div class="notification-container" id="notificationContainer"></div>
+
+    <!-- Script File -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>

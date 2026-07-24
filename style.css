@@ -662,7 +662,7 @@ body.light-theme .moon-icon {
 /* Center Title and Subtitle Container */
 .hero-title-container {
     position: absolute;
-    top: 45%;
+    top: 38%;
     left: 50%;
     /* Center container absolutely; scroll-y controls parallax; scroll-hero-ratio scales it in distance */
     transform: translate(-50%, calc(-50% + var(--scroll-y) * 0.12)) scale(calc(1 - var(--scroll-hero-ratio) * 0.04));
@@ -1838,16 +1838,11 @@ body.light-theme .moon-icon {
     background-repeat: no-repeat;
     background-attachment: fixed;
     /* Zoom the scenery backdrops */
-    transform: scale(calc(1.2 - Math.abs(0.5 - var(--scroll-ratio)) * 0.25));
+    transform: scale(calc(1.2 - abs(0.5 - var(--scroll-ratio)) * 0.25));
     transition: transform 0.15s ease-out;
 }
 
 /* Section 3: Reasons Section (Clearing Haze/Mist) */
-.reasons-section {
-    position: relative;
-    overflow: hidden;
-}
-
 .reasons-section {
     position: relative;
     overflow: hidden;
@@ -1857,7 +1852,7 @@ body.light-theme .moon-icon {
     background-repeat: no-repeat;
     background-attachment: fixed;
     /* Zoom the reasons background */
-    transform: scale(calc(1.15 - Math.abs(0.5 - var(--scroll-ratio)) * 0.15));
+    transform: scale(calc(1.15 - abs(0.5 - var(--scroll-ratio)) * 0.15));
     transition: transform 0.15s ease-out;
 }
 
@@ -1912,7 +1907,7 @@ body.light-theme .moon-icon {
 .reasons-section .container,
 .explore-section .container {
     /* Instead of shrinking out of view, text levitates and floats up/down slowly relative to scenery */
-    transform: translateY(calc((0.5 - var(--scroll-ratio)) * -90px)) scale(calc(0.96 + (1 - Math.abs(0.5 - var(--scroll-ratio)) * 2) * 0.04));
+    transform: translateY(calc((0.5 - var(--scroll-ratio)) * -90px)) scale(calc(0.96 + (1 - abs(0.5 - var(--scroll-ratio)) * 2) * 0.04));
     opacity: var(--zoom-opacity);
     transform-origin: center center;
     transition: transform 0.15s ease-out, opacity 0.12s linear;

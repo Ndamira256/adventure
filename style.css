@@ -675,6 +675,20 @@ body.light-theme .moon-icon {
     transition: opacity 0.12s linear;
 }
 
+/* Center Caption and CTA Container */
+.hero-caption-container {
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% + var(--scroll-y) * 0.12)) scale(calc(1 - var(--scroll-hero-ratio) * 0.04));
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+    pointer-events: none;
+    opacity: var(--zoom-opacity);
+    transition: opacity 0.12s linear;
+}
+
 /* Enable pointer events on CTA buttons specifically so they remain clickable */
 .hero-cta {
     pointer-events: auto;

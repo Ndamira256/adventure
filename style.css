@@ -662,7 +662,7 @@ body.light-theme .moon-icon {
 /* Center Title and Subtitle Container */
 .hero-title-container {
     position: absolute;
-    top: 38%;
+    top: 34%;
     left: 50%;
     /* Center container absolutely; scroll-y controls parallax; scroll-hero-ratio scales it in distance */
     transform: translate(-50%, calc(-50% + var(--scroll-y) * 0.12)) scale(calc(1 - var(--scroll-hero-ratio) * 0.04));
@@ -678,7 +678,7 @@ body.light-theme .moon-icon {
 /* Center Caption and CTA Container */
 .hero-caption-container {
     position: absolute;
-    top: 49%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, calc(-50% + var(--scroll-y) * 0.12)) scale(calc(1 - var(--scroll-hero-ratio) * 0.04));
     width: 100%;

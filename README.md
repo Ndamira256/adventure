@@ -1,0 +1,1 @@
+Adventure Project\n==============\n\nThis repository contains the Adventure web application, featuring a dynamic hero section, interactive navigation, and modern design elements.\n\nExplore the code to customize destinations, styles, and animations.
